@@ -43,7 +43,7 @@ class Illaoi {
      * @param  integer $iteration
      * @return [type]
      */
-    public function generateUnique($text, Model $model, $idToIgnore = null)
+    public function generateUnique($text, Model $model, $idToIgnore = 0)
     {
         $iteration = 2;
 

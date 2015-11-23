@@ -48,7 +48,7 @@ Illaoi::generate('This is a post')
 // returns: this-is-a-post
 ```
 
-#### `generateUnique($text, Model $model, $idToIgnore = null)`
+#### `generateUnique($text, Model $model, $idToIgnore = 0)`
 
 Use this when you want to create a unique slug for a model.
 
