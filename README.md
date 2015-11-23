@@ -1,8 +1,6 @@
 # Illaoi
 
-[![Build Status](https://travis-ci.org/laravelista/Illaoi.svg)](https://travis-ci.org/laravelista/Illaoi)
-
-[![Latest Stable Version](https://poser.pugx.org/laravelista/illaoi/v/stable)](https://packagist.org/packages/laravelista/illaoi) [![Total Downloads](https://poser.pugx.org/laravelista/illaoi/downloads)](https://packagist.org/packages/laravelista/illaoi) [![Latest Unstable Version](https://poser.pugx.org/laravelista/illaoi/v/unstable)](https://packagist.org/packages/laravelista/illaoi) [![License](https://poser.pugx.org/laravelista/illaoi/license)](https://packagist.org/packages/laravelista/illaoi)
+[![Build Status](https://travis-ci.org/laravelista/Illaoi.svg)](https://travis-ci.org/laravelista/Illaoi) [![Latest Stable Version](https://poser.pugx.org/laravelista/illaoi/v/stable)](https://packagist.org/packages/laravelista/illaoi) [![Total Downloads](https://poser.pugx.org/laravelista/illaoi/downloads)](https://packagist.org/packages/laravelista/illaoi) [![Latest Unstable Version](https://poser.pugx.org/laravelista/illaoi/v/unstable)](https://packagist.org/packages/laravelista/illaoi) [![License](https://poser.pugx.org/laravelista/illaoi/license)](https://packagist.org/packages/laravelista/illaoi)
 
 Generates slugs for Laravel.
 
