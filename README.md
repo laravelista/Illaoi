@@ -61,13 +61,13 @@ eg. this-is-a-post, this-is-a-post-2, this-is-a-post-3
 ```php
 Illaoi::generateUnique('This is a post', new App\Post);
 
-// returns: this-is-a-title
+// returns: this-is-a-post
 ```
 
 ##### Updating Model
 
 ```php
-$post = Post::create([
+$post = App\Post::create([
     'id' => 1,
     'title' => 'This is a post,
     'slug' => 'this-is-a-post'
@@ -75,9 +75,9 @@ $post = Post::create([
 
 Illaoi::generateUnique('This is a post', new App\Post, 1);
 
-// returns: this-is-a-title
+// returns: this-is-a-post
 
 Illaoi::generateUnique('This is a post', new App\Post);
 
-// returns: this-is-a-title-2
+// returns: this-is-a-post-2
 ```
