@@ -38,25 +38,25 @@ class Illaoi {
      * Turns 'Old Dota' to 'old-dota' or 'old-dota-2.
      * Generates unique slug by verifying in database.
      *
-     * @param  [type] $slug
+     * @param  [type] $text
      * @param  Model $model
      * @param  integer $iteration
      * @return [type]
      */
-    public function generateUnique($slug, Model $model, $idToIgnore = null)
+    public function generateUnique($text, Model $model, $idToIgnore = null)
     {
         $iteration = 2;
 
         // old-dota
-        $newSlug = $this->generate($slug);
+        $slug = $this->generate($text);
 
-        while($model->whereSlug($newSlug)->where('id', '!=', $idToIgnore)->exists())
+        while($model->whereSlug($slug)->where('id', '!=', $idToIgnore)->exists())
         {
             // old-dota-2
-            $newSlug = $this->generate($slug . '-' . $iteration++);
+            $slug = $this->generate($slug . '-' . $iteration++);
         }
 
-        return $newSlug;
+        return $slug;
     }
 
 }

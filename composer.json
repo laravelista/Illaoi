@@ -1,6 +1,6 @@
 {
     "name": "laravelista/illaoi",
-    "description": "Generates slugs for everLaravel.",
+    "description": "Generates slugs for Laravel.",
     "license": "MIT",
     "keywords": ["slug", "laravel", "helper"],
     "authors": [
