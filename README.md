@@ -48,11 +48,11 @@ Illaoi::generate('This is a post')
 // returns: this-is-a-post
 ```
 
-#### `generateUnique($text, Model $model, $idToIgnore = 0)`
+#### `generateUnique($text, Model $model, $field = 'slug', $idToIgnore = 0)`
 
 Use this when you want to create a unique slug for a model.
 
-It searches for generated slug in Model by field `slug` and if found increments last number by  1 starting from number 2.
+It searches for generated slug in Model by field and if found increments last number by  1 starting from number 2. You can pass as id to ignore; useful when updating model.
 
 eg. this-is-a-post, this-is-a-post-2, this-is-a-post-3
 
@@ -73,7 +73,7 @@ $post = App\Post::create([
     'slug' => 'this-is-a-post'
 ]);
 
-Illaoi::generateUnique('This is a post', new App\Post, 1);
+Illaoi::generateUnique('This is a post', new App\Post, 'slug', 1);
 
 // returns: this-is-a-post
 

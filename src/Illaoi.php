@@ -40,17 +40,18 @@ class Illaoi {
      *
      * @param  [type] $text
      * @param  Model $model
-     * @param  integer $iteration
+     * @param  string $field
+     * @param  integer $idToIgnore
      * @return [type]
      */
-    public function generateUnique($text, Model $model, $idToIgnore = 0)
+    public function generateUnique($text, Model $model, $field = 'slug', $idToIgnore = 0)
     {
         $iteration = 2;
 
         // old-dota
         $slug = $this->generate($text);
 
-        while($model->whereSlug($slug)->where('id', '!=', $idToIgnore)->exists())
+        while($model->where($field, '=', $slug)->where('id', '!=', $idToIgnore)->exists())
         {
             // old-dota-2
             $slug = $this->generate($slug . '-' . $iteration++);
