@@ -14,9 +14,9 @@ class IllaoiServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('illaoi', function()
+        $this->app->bind('illaoi', function()
         {
-            return new Illaoi();
+            return new Illaoi;
         });
     }
 }

@@ -14,7 +14,7 @@ First, pull in the package through Composer.
 
 ```json
 "require": {
-    "laravelista/illaoi": "~1.0"
+    "laravelista/illaoi": "~2.0"
 }
 ```
 
@@ -48,11 +48,11 @@ Illaoi::generate('This is a post')
 // returns: this-is-a-post
 ```
 
-#### `generateUnique($text, Model $model, $field = 'slug', $idToIgnore = 0)`
+#### `generateUnique($text, Model $model)`
 
 Use this when you want to create a unique slug for a model.
 
-It searches for generated slug in Model by field and if found increments last number by  1 starting from number 2. You can pass as id to ignore; useful when updating model.
+It searches for generated slug in Model by `slug` and if found increments last number by  1 starting from number 2. 
 
 eg. this-is-a-post, this-is-a-post-2, this-is-a-post-3
 
@@ -70,14 +70,20 @@ Illaoi::generateUnique('This is a post', new App\Post);
 $post = App\Post::create([
     'id' => 1,
     'title' => 'This is a post,
-    'slug' => 'this-is-a-post'
+    'seo_slug' => 'this-is-a-post'
 ]);
 
-Illaoi::generateUnique('This is a post', new App\Post, 'slug', 1);
+Illaoi::searchBy('seo_slug')
+    ->ignoreId(1)
+    ->generateUnique('This is a post', new App\Post);
 
 // returns: this-is-a-post
 
 Illaoi::generateUnique('This is a post', new App\Post);
 
 // returns: this-is-a-post-2
+
+Illaoi::setIteration(1)->generateUnique('This is a post', new App\Post);
+
+// returns: this-is-a-post-1
 ```
